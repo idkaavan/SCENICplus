@@ -1,0 +1,26 @@
+#python based tool for generating gene regulatory network https://scenicplus.readthedocs.io/en/latest/index.html# 
+# notebook available for the scATAC processing and pseudobulking
+#CMD
+conda create --name scenicplus python=3.11
+conda activate scenicplus
+git clone https://github.com/aertslab/scenicplus
+cd scenicplus
+git checkout development
+pip install .
+# check the installation
+import scenicplus
+scenicplus.__version__
+## scATAC preprocess with built-in pycistopic
+# pip install setuptools
+# pip install --upgrade ray
+# https://pycistopic.readthedocs.io/en/latest/notebooks/human_cerebellum.html
+## scRNA preprocess with scanpy
+# https://scenicplus.readthedocs.io/en/latest/human_cerebellum_scRNA_pp.html#Preprocessing-the-scRNA-seq-data
+## (Optional but recommended) generate a custom cisTarget database
+# https://scenicplus.readthedocs.io/en/latest/human_cerebellum_ctx_db.html#Creating-custom-cistarget-database
+## run the pipeline from config.yaml snakemake file
+# pip install --upgrade pandas dask joblib
+# pip install --upgrade pandas scanpy
+cd scplus_pipeline/Snakemake/
+conda activate scenicplus
+snakemake --cores 20
