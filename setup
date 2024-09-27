@@ -13,6 +13,7 @@ scenicplus.__version__
 ## scATAC preprocess with built-in pycistopic
 # pip install setuptools
 # pip install --upgrade ray
+# macs2 executives: /usr/share/lmod/lmod/modulefiles/Core/macs2
 # https://pycistopic.readthedocs.io/en/latest/notebooks/human_cerebellum.html
 ## scRNA preprocess with scanpy
 # https://scenicplus.readthedocs.io/en/latest/human_cerebellum_scRNA_pp.html#Preprocessing-the-scRNA-seq-data
